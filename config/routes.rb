@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :cars
 
-  resources :posts
+  resources :posts, only: [:index, :show]
+  resources :users, except: [:index]
   # get "/posts", to: "posts#index"
   # get "/posts/new", to: "posts#new"
   # get "/posts/:id", to: "posts#show"
